@@ -1,0 +1,228 @@
+.testimonialsSection {
+  background: #111318;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.subtext {
+  font-size: 16px;
+  color: #9CA3AF;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonialCardWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonialCard {
+  padding: 48px;
+  border-radius: 24px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(139, 92, 246, 0.08);
+  transition: all 0.4s ease;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.quoteIcon {
+  color: #8B5CF6;
+  opacity: 0.8;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.quoteText {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.6;
+  color: #F3F4F6;
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 28px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.authorAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8B5CF6, #4F8CFF);
+  color: #FFFFFF;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.authorName {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.authorRole {
+  font-size: 14px;
+  color: #9CA3AF;
+  margin-bottom: 6px;
+}
+
+.companyName {
+  color: #C4B5FD;
+  font-weight: 600;
+}
+
+.industryTag {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8B5CF6;
+  background: rgba(139, 92, 246, 0.1);
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.metricBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 12px 20px;
+  border-radius: 16px;
+}
+
+.metricValue {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #4F8CFF;
+  line-height: 1;
+  background: linear-gradient(135deg, #4F8CFF, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metricLabel {
+  font-size: 11px;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  width: 32px;
+  background: #8B5CF6;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.navBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.navBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  background: #8B5CF6;
+  border-color: #8B5CF6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+@media (max-width: 768px) {
+  .testimonialCard {
+    padding: 30px 24px;
+  }
+  .cardBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .metricBlock {
+    align-items: flex-start;
+    width: 100%;
+  }
+}

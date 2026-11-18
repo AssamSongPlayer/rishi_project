@@ -1,0 +1,27 @@
+.scrollBtn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(17, 19, 24, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 998;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(139, 92, 246, 0.2);
+}
+
+.scrollBtn:hover {
+  background: #8B5CF6;
+  border-color: #8B5CF6;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(139, 92, 246, 0.5);
+}

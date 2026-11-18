@@ -1,0 +1,185 @@
+/* ==========================
+   Industries Section Styles
+   ========================== */
+
+.industries {
+  background: #08090c;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background accent */
+.industries::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ---- Header ---- */
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  max-width: 520px;
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+/* ---- Grid ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ---- Card ---- */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 36px 24px;
+  border-radius: 16px;
+  cursor: default;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  /* glass is applied via global class */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.15), 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon wrapper with gradient container */
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+}
+
+.card:hover .iconWrap {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.icon {
+  /* Apply gradient effect via filter / color */
+  color: #8b5cf6;
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.card:hover .icon {
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.7));
+  transform: scale(1.08);
+}
+
+.industryName {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+
+.categoryLabel {
+  font-size: 12px;
+  color: #6b7280;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    padding: 28px 16px;
+  }
+
+  .iconWrap {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 768px) {
+  .industries {
+    padding: 80px 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .header {
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .card {
+    padding: 24px 14px;
+    gap: 10px;
+  }
+
+  .iconWrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+  }
+}
